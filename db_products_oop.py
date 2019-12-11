@@ -45,6 +45,36 @@ class NWProducts(MSDBConnection):
         query4 = 'SELECT TOP 10 * FROM Products ORDER BY UnitPrice asc'
         data = self.__sql_query(query4)
         print( data.fetchall())
+    def average(self):
+        query = 'SELECT AVG(UnitPrice) FROM Products'
+        data = self.__sql_query(query)
+        print( data.fetchall())
+    def max(self):
+        query = 'SELECT Max(UnitPrice) FROM Products'
+        data = self.__sql_query(query)
+        print( data.fetchall())
+    def min(self):
+        query = 'SELECT MIN(UnitPrice) FROM Products'
+        data = self.__sql_query(query)
+        print( data.fetchall())
+    def range(self):
+        lower = input('Enter lower bound for range')
+        upper = input('Enter upper bound for range')
+        query = f'SELECT * FROM Products WHERE UnitPrice BETWEEN {lower} AND {upper}'
+        data = self.__sql_query(query)
+        print( data.fetchall())
+    def name_search(self):
+        name = input('Enter the product name')
+        query = f'SELECT * FROM Products where ProductName = {name}'
+        data = self.__sql_query(query)
+        print( data.fetchall())
+    def create(self):
+        name_create = input('Enter the product name which you want to create')
+        query = f'Insert into Products (ProductName) VALUES ({name_create})'
+        query2 = f'SELECT * FROM Products WHERE ProductName = {name_create}'
+        data = self.__sql_query(query)
+        data2 = self.__sql_query(query2)
+        print( data2.fetchall())
     #Search product by name
 
 #variable for NW Product table

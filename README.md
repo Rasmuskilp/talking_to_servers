@@ -11,3 +11,5 @@ last_name,passport_number)
 5) Add one data point to each table
 6)Try to connect via your python project
 ###connect it to python -database
+#if you want to use encapsulated from parent class
+ : ``_PARENTCLASS__METHOD``

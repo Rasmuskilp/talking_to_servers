@@ -10,7 +10,7 @@ while True:
     print('choose 5 for all employees')
     print('choose 6 for one employee')
     print('choose 7 if you want to search for employee by last name')
-    user_i =input('Choose 1,2,3,4,5,6 pr 7')
+    user_i =input('Choose 1,2,3,4,5,6,7,8,9,10,11,12,13')
     if user_i == '1':
         products_table.print_all()
         # print('getting all products')
@@ -35,11 +35,36 @@ while True:
     elif user_i == '7':
         employee_table.search_employee()
         print(employee_table)
+    elif user_i == '8':
+        products_table.average()
+        print(products_table)
+    elif user_i == '9':
+        products_table.max()
+        print(products_table)
+    elif user_i == '10':
+        products_table.min()
+        print(products_table)
+    elif user_i == '11':
+        products_table.range()
+        print(products_table)
+    elif user_i == '12':
+        products_table.name_search()
+        print(products_table)
+    elif user_i == '13':
+        products_table.create()
+        print(products_table)
     elif 'bye' in user_i or 'exit' in user_i:
         print('goodbye! Thank you for choosing our programme.')
     else:
         print("I didn't quite get that, please choose from other available options.")
-
+# prints top 10 products by price - Formatted
+# prints bottom 10 products by price - Formatted
+# Average price
+# Max price
+# Min Price
+# products in price range
+# Search product by name
+# Create one product
 
 
 
