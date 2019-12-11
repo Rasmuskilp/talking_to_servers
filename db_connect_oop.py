@@ -11,7 +11,7 @@ class MSDBConnection():
             + self.username + ';PWD=' + self.password)
         self.cursor = self.docker_Northwind.cursor()
     def __sql_query(self,sql_query): # Makes it private
-        return self.cursor.execute(sql_query)
+        self.cursor.execute(sql_query)
     # Read / list all
     # Read one
     ## ask for input --> front end -- input()
